@@ -21,60 +21,60 @@
 // console.log(car2.start())
 
 
-// // Set: Unique logged-in users (user IDs)
-// const loggedInUsers = new Set();
+// Set: Unique logged-in users (user IDs)
+const loggedInUsers = new Set();
 
-// // Map: User info with user ID as key
-// const userInfo = new Map();
+// Map: User info with user ID as key
+const userInfo = new Map();
 
 // Function to simulate user login
-// function loginUser(id, name, email) {
-//   if (!loggedInUsers.has(id)) {
-//     loggedInUsers.add(id);
-//     userInfo.set(id, { name, email });
-//     console.log(`${name} logged in successfully ✅`);
-//   } else {
-//     console.log(`${name} is already logged in! ⚠️`);
-//   }
-// }
+function loginUser(id, name, email) {
+  if (!loggedInUsers.has(id)) {
+    loggedInUsers.add(id);
+    userInfo.set(id, { name, email });
+    console.log(`${name} logged in successfully ✅`);
+  } else {
+    console.log(`${name} is already logged in! ⚠️`);
+  }
+}
 
-// // Function to show all currently logged-in users
-// function showLoggedInUsers() {
-//   console.log("\n🧑‍💻 Currently Logged-in Users:");
-//   loggedInUsers.forEach((id) => {
-//     const user = userInfo.get(id);
-//     console.log(`- ${user.name} (${user.email})`);
-//   });
-// }
+// Function to show all currently logged-in users
+function showLoggedInUsers() {
+  console.log("\n🧑‍💻 Currently Logged-in Users:");
+  loggedInUsers.forEach((id) => {
+    const user = userInfo.get(id);
+    console.log(`- ${user.name} (${user.email})`);
+  });
+}
 
-// // Function to log out a user
-// function logoutUser(id) {
-//   if (loggedInUsers.has(id)) {
-//     const user = userInfo.get(id);
-//     loggedInUsers.delete(id);
-//     console.log(`${user.name} logged out 📴`);
-//   } else {
-//     console.log(`User ID ${id} is not logged in ❌`);
-//   }
-// }
+// Function to log out a user
+function logoutUser(id) {
+  if (loggedInUsers.has(id)) {
+    const user = userInfo.get(id);
+    loggedInUsers.delete(id);
+    console.log(`${user.name} logged out 📴`);
+  } else {
+    console.log(`User ID ${id} is not logged in ❌`);
+  }
+}
 
-// // Simulate some users logging in
-// loginUser(1, "Shoaib", "shoaib@example.com");
-// loginUser(2, "Ali", "ali@example.com");
-// loginUser(3, "Usman", "usman@example.com");
-// loginUser(2, "Ali", "ali@example.com"); // Duplicate login
+// Simulate some users logging in
+loginUser(1, "Shoaib", "shoaib@example.com");
+loginUser(2, "Ali", "ali@example.com");
+loginUser(3, "Usman", "usman@example.com");
+loginUser(2, "Ali", "ali@example.com"); // Duplicate login
 
-// showLoggedInUsers();
+showLoggedInUsers();
 
-// // Logging out a user
-// logoutUser(2);
-// logoutUser(4); // Invalid logout
+// Logging out a user
+logoutUser(2);
+logoutUser(4); // Invalid logout
 
-// showLoggedInUsers();
+showLoggedInUsers();
 
 
-// import { subtract } from "./math.js";
-// console.log(78 - 34)
+import { subtract } from "./math.js";
+console.log(78 - 34)
 
 
 import { Person } from "./math.js";
