@@ -31,7 +31,7 @@ const userInfo = new Map();
 function loginUser(id, name, email) {
   if (!loggedInUsers.has(id)) {
     loggedInUsers.add(id);
-    userInfo.set(id, { name, email });
+    userInfo.set(id, { name, email});
     console.log(`${name} logged in successfully ✅`);
   } else {
     console.log(`${name} is already logged in! ⚠️`);
